@@ -12,6 +12,7 @@ local TAB_WIDTH = 2
 vim.opt.tabstop = TAB_WIDTH
 vim.opt.shiftwidth = TAB_WIDTH
 vim.opt.expandtab = true
+vim.opt.scrolloff = 5
 
 local opts = { remap = false, silent = true }
 local opts_remap = { remap = true, silent = true }
