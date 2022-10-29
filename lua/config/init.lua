@@ -16,14 +16,17 @@ vim.opt.expandtab = true
 local opts = { remap = false, silent = true }
 local opts_remap = { remap = true, silent = true }
 
+-- vim.g.mapleader = ' '
+vim.keymap.set('n', '<space>', '<plug>(easymotion-prefix)', opts_remap)
+vim.keymap.set('v', '<space>', '<plug>(easymotion-prefix)', opts_remap)
+vim.keymap.set('n', 'go', 'g%', opts_remap)
+vim.keymap.set('i', '<c-c>', '<c-[>', opts_remap)
+
+-- pane navigation
 vim.keymap.set('n', '<c-h>', ':wincmd h<cr>', opts)
 vim.keymap.set('n', '<c-j>', ':wincmd j<cr>', opts)
 vim.keymap.set('n', '<c-k>', ':wincmd k<cr>', opts)
 vim.keymap.set('n', '<c-l>', ':wincmd l<cr>', opts)
-vim.keymap.set('i', '<c-c>', '<c-[>', opts_remap)
-
-vim.keymap.set('n', 'go', 'g%', opts_remap)
-
 
 local on_attach = function(client, bufnr)
   -- Enable completion triggered by <c-x><c-o>
