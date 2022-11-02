@@ -18,8 +18,8 @@ local opts = { remap = false, silent = true }
 local opts_remap = { remap = true, silent = true }
 
 -- vim.g.mapleader = ' '
-vim.keymap.set('n', '<space>', '<plug>(easymotion-prefix)', opts_remap)
-vim.keymap.set('v', '<space>', '<plug>(easymotion-prefix)', opts_remap)
+vim.keymap.set('n', '<space><space>', '<plug>(easymotion-prefix)', opts_remap)
+vim.keymap.set('v', '<space><space>', '<plug>(easymotion-prefix)', opts_remap)
 vim.keymap.set('n', 'go', 'g%', opts_remap)
 vim.keymap.set('i', '<c-c>', '<c-[>', opts_remap)
 
